@@ -1,4 +1,10 @@
+using DatabaseMastery.TransportMongoDb.Services.SliderServices;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+
+builder.Services.AddScoped<ISliderService, SliderService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
