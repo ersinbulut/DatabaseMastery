@@ -1,10 +1,18 @@
 using DatabaseMastery.TransportMongoDb.Services.SliderServices;
-
+using DatabaseMastery.TransportMongoDb.Settings;
+using Microsoft.Extensions.Options;
+using System.Reflection;
+using AutoMapper;
 var builder = WebApplication.CreateBuilder(args);
 
 
-
 builder.Services.AddScoped<ISliderService, SliderService>();
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("DatabaseSettingsKey"));
+
+builder.Services.AddScoped<IDatabaseSettings>(
+    sp => sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
