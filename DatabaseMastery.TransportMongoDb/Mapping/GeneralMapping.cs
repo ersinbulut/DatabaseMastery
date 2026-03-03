@@ -33,15 +33,15 @@ namespace DatabaseMastery.TransportMongoDb.Mapping
             CreateMap<Offer, UpdateOfferDto>().ReverseMap();
             CreateMap<Offer, GetOfferByIdDto>().ReverseMap();
 
-            //CreateMap<About, ResultAboutDto>().ReverseMap();
-            //CreateMap<About, CreateAboutDto>().ReverseMap();
-            //CreateMap<About, UpdateAboutDto>().ReverseMap();
-            //CreateMap<About, GetAboutByIdDto>().ReverseMap();
+            CreateMap<About, ResultAboutDto>().ReverseMap();
+            CreateMap<About, CreateAboutDto>().ReverseMap();
+            CreateMap<About, UpdateAboutDto>().ReverseMap();
+            CreateMap<About, GetAboutByIdDto>().ReverseMap();
 
-            //CreateMap<GetInTouch, ResultGetInTouchDto>().ReverseMap();
-            //CreateMap<GetInTouch, UpdateGetInTouchDto>().ReverseMap();
-            //CreateMap<GetInTouch, CreateGetInTouchDto>().ReverseMap();
-            //CreateMap<GetInTouch, GetGetInTouchByIdDto>().ReverseMap();
+            CreateMap<GetInTouch, ResultGetInTouchDto>().ReverseMap();
+            CreateMap<GetInTouch, UpdateGetInTouchDto>().ReverseMap();
+            CreateMap<GetInTouch, CreateGetInTouchDto>().ReverseMap();
+            CreateMap<GetInTouch, GetGetInTouchByIdDto>().ReverseMap();
 
             //CreateMap<HowItWork, ResultHowItWorkDto>().ReverseMap();
             //CreateMap<HowItWork, CreateHowItWorkDto>().ReverseMap();

@@ -7,32 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Services\AboutServices\**" />
-    <Compile Remove="Services\GetInTouchServices\**" />
     <Compile Remove="Services\HowItWorkServices\**" />
     <Compile Remove="Services\ProjectSectionServices\**" />
     <Compile Remove="Services\QuestionServices\**" />
     <Compile Remove="Services\ShipmentServices\**" />
     <Compile Remove="Services\ShipmentTrackingServices\**" />
     <Compile Remove="Services\TestimonialServices\**" />
-    <Content Remove="Services\AboutServices\**" />
-    <Content Remove="Services\GetInTouchServices\**" />
     <Content Remove="Services\HowItWorkServices\**" />
     <Content Remove="Services\ProjectSectionServices\**" />
     <Content Remove="Services\QuestionServices\**" />
     <Content Remove="Services\ShipmentServices\**" />
     <Content Remove="Services\ShipmentTrackingServices\**" />
     <Content Remove="Services\TestimonialServices\**" />
-    <EmbeddedResource Remove="Services\AboutServices\**" />
-    <EmbeddedResource Remove="Services\GetInTouchServices\**" />
     <EmbeddedResource Remove="Services\HowItWorkServices\**" />
     <EmbeddedResource Remove="Services\ProjectSectionServices\**" />
     <EmbeddedResource Remove="Services\QuestionServices\**" />
     <EmbeddedResource Remove="Services\ShipmentServices\**" />
     <EmbeddedResource Remove="Services\ShipmentTrackingServices\**" />
     <EmbeddedResource Remove="Services\TestimonialServices\**" />
-    <None Remove="Services\AboutServices\**" />
-    <None Remove="Services\GetInTouchServices\**" />
     <None Remove="Services\HowItWorkServices\**" />
     <None Remove="Services\ProjectSectionServices\**" />
     <None Remove="Services\QuestionServices\**" />

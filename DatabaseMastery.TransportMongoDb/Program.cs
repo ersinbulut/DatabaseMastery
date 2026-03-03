@@ -5,12 +5,16 @@ using System.Reflection;
 using AutoMapper;
 using DatabaseMastery.TransportMongoDb.Services.BrandServices;
 using DatabaseMastery.TransportMongoDb.Services.OfferServices;
+using DatabaseMastery.TransportMongoDb.Services.AboutServices;
+using DatabaseMastery.TransportMongoDb.Services.GetInTouchServices;
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<IOfferService, OfferService>();
+builder.Services.AddScoped<IAboutService, AboutService>();
+builder.Services.AddScoped<IGetInTouchService, GetInTouchService>();
 
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
