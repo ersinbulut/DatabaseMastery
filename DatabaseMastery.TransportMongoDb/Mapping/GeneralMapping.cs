@@ -23,15 +23,15 @@ namespace DatabaseMastery.TransportMongoDb.Mapping
             CreateMap<Slider, UpdateSliderDto>().ReverseMap();
             CreateMap<Slider, GetSliderByIdDto>().ReverseMap();
 
-            //CreateMap<Brand, ResultBrandDto>().ReverseMap();
-            //CreateMap<Brand, CreateBrandDto>().ReverseMap();
-            //CreateMap<Brand, UpdateBrandDto>().ReverseMap();
-            //CreateMap<Brand, GetBrandByIdDto>().ReverseMap();
+            CreateMap<Brand, ResultBrandDto>().ReverseMap();
+            CreateMap<Brand, CreateBrandDto>().ReverseMap();
+            CreateMap<Brand, UpdateBrandDto>().ReverseMap();
+            CreateMap<Brand, GetBrandByIdDto>().ReverseMap();
 
-            //CreateMap<Offer, ResultOfferDto>().ReverseMap();
-            //CreateMap<Offer, CreateOfferDto>().ReverseMap();
-            //CreateMap<Offer, UpdateOfferDto>().ReverseMap();
-            //CreateMap<Offer, GetOfferByIdDto>().ReverseMap();
+            CreateMap<Offer, ResultOfferDto>().ReverseMap();
+            CreateMap<Offer, CreateOfferDto>().ReverseMap();
+            CreateMap<Offer, UpdateOfferDto>().ReverseMap();
+            CreateMap<Offer, GetOfferByIdDto>().ReverseMap();
 
             //CreateMap<About, ResultAboutDto>().ReverseMap();
             //CreateMap<About, CreateAboutDto>().ReverseMap();

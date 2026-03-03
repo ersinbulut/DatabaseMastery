@@ -3,10 +3,16 @@ using DatabaseMastery.TransportMongoDb.Settings;
 using Microsoft.Extensions.Options;
 using System.Reflection;
 using AutoMapper;
+using DatabaseMastery.TransportMongoDb.Services.BrandServices;
+using DatabaseMastery.TransportMongoDb.Services.OfferServices;
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddScoped<ISliderService, SliderService>();
+builder.Services.AddScoped<IBrandService, BrandService>();
+builder.Services.AddScoped<IOfferService, OfferService>();
+
+
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("DatabaseSettingsKey"));

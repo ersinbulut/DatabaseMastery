@@ -1,12 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DatabaseMastery.TransportMongoDb.Services.BrandServices;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace DatabaseMastery.TransportMongoDb.ViewComponents.DefaultComponents
 {
     public class _DefaultBrandComponentPartial: ViewComponent
     {
-        public IViewComponentResult Invoke()
+        private readonly IBrandService _brandService;
+
+        public _DefaultBrandComponentPartial(IBrandService brandService)
         {
-            return View();
+            _brandService = brandService;
+        }
+
+        public async Task<IViewComponentResult> InvokeAsync()
+        {
+            var values=await _brandService.GetAllBrandAsync();
+            return View(values);
         }
     }
 }
