@@ -7,6 +7,11 @@ using DatabaseMastery.TransportMongoDb.Services.BrandServices;
 using DatabaseMastery.TransportMongoDb.Services.OfferServices;
 using DatabaseMastery.TransportMongoDb.Services.AboutServices;
 using DatabaseMastery.TransportMongoDb.Services.GetInTouchServices;
+using DatabaseMastery.TransportMongoDb.Services.HowItWorkServices;
+
+using DatabaseMastery.TransportMongoDb.Services.TestimonialServices;
+using DatabaseMastery.TransportMongoDb.Services.ProjectSectionServices;
+using DatabaseMastery.TransportMongoDb.Services.QuestionServices;
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -15,6 +20,10 @@ builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<IOfferService, OfferService>();
 builder.Services.AddScoped<IAboutService, AboutService>();
 builder.Services.AddScoped<IGetInTouchService, GetInTouchService>();
+builder.Services.AddScoped<IHowItWorkService, HowItWorkService>();
+builder.Services.AddScoped<ITestimonialService, TestimonialService>();
+builder.Services.AddScoped<IProjectSectionService, ProjectSectionService>();
+builder.Services.AddScoped<IQuestionService, QuestionService>();
 
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());

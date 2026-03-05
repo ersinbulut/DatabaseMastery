@@ -1,110 +1,43 @@
-﻿<section class="section pt-85 bg-worldmap">
+﻿@model List<ResultHowItWorkDto>
+
+<section class="section pt-85 bg-worldmap">
     <div class="container">
         <div class="text-center">
             <img class="mb-15" src="/templates/assets/imgs/template/icons/favicon.svg" alt="transp">
-            <h2 class="color-brand-2 mb-20">Nasıl Çalışır?</h2>
+            <h2 class="color-brand-2 mb-20">Nasıl Çalışıyoruz?</h2>
             <p class="font-md color-grey-700">
-                Teslimat yapmak istediğiniz şehirleri seçersiniz. Tüm gönderimler belirli bir hizmet alanı
-                içerisinde gerçekleştirilir ve teslimat hizmetleri konuma göre değişiklik gösterebilir.
-                Taşıma türü veya gereksinim ne olursa olsun, zamanında teslimatı garanti altına almak için
-                en uygun ve hızlı gönderim çözümünü bulur ve planlarız.
+                Teslimat yapılacak şehirleri siz seçin, gerisini biz planlayalım.
+                Hizmet bölgemize uygun en hızlı ve güvenli taşıma çözümünü belirleyerek gönderilerinizi zamanında ulaştırıyoruz.
             </p>
         </div>
-
         <div class="row mt-50">
             <div class="col-lg-6 mb-30">
                 <div class="box-image-how">
                     <img class="w-100" src="/templates/assets/imgs/page/homepage1/how-it-work.png" alt="transp">
-
                     <div class="box-info-bottom-img">
-                        <div class="image-play">
-                            <img class="mb-15" src="/templates/assets/imgs/template/icons/play.svg" alt="transp">
-                        </div>
+                        <div class="image-play"><img class="mb-15" src="/templates/assets/imgs/template/icons/play.svg" alt="transp"></div>
                         <div class="info-play">
-                            <h4 class="color-white mb-15">
-                                Bu sektörde 25 yıllık deneyime sahibiz
-                            </h4>
+                            <h4 class="color-white mb-15">Lojistikte 25 Yıllık Tecrübe</h4>
                             <p class="font-sm color-white">
-                                Uzun yıllara dayanan tecrübemiz ile güvenilir, hızlı ve profesyonel lojistik çözümleri sunuyoruz.
+                                Yılların verdiği deneyimle kara, hava ve deniz taşımacılığında
+                                güvenilir çözümler sunuyoruz. Her gönderide hız, güven ve kaliteyi ön planda tutuyoruz.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="col-lg-6 mb-30">
                 <ul class="list-how-works">
-
-                    <li>
-                        <div class="image-how">
-                            <span class="img">
-                                <img src="/templates/assets/imgs/page/homepage1/order.png" alt="transp">
-                            </span>
-                        </div>
-                        <div class="info-how">
-                            <h5 class="color-brand-2">Müşteri Sipariş Oluşturur</h5>
-                            <p class="font-md color-grey-700">
-                                Ürünlerin kontrolü ve kalite denetimi yapılır.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="image-how">
-                            <span class="img">
-                                <img src="/templates/assets/imgs/page/homepage1/payment.png" alt="transp">
-                            </span>
-                        </div>
-                        <div class="info-how">
-                            <h5 class="color-brand-2">Ödeme Onaylanır</h5>
-                            <p class="font-md color-grey-700">
-                                Kredi kartı, banka kartı veya diğer ödeme yöntemleri ile güvenli ödeme sağlanır.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="image-how">
-                            <span class="img">
-                                <img src="/templates/assets/imgs/page/homepage1/warehouse.png" alt="transp">
-                            </span>
-                        </div>
-                        <div class="info-how">
-                            <h5 class="color-brand-2">Depo Siparişi Teslim Alır</h5>
-                            <p class="font-md color-grey-700">
-                                Ürünlerin doğruluğu ve eksiksizliği kontrol edilir.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="image-how">
-                            <span class="img">
-                                <img src="/templates/assets/imgs/page/homepage1/picked.png" alt="transp">
-                            </span>
-                        </div>
-                        <div class="info-how">
-                            <h5 class="color-brand-2">Ürün Hazırlanır ve Kargolanır</h5>
-                            <p class="font-md color-grey-700">
-                                Ürünler paketlenir ve yerel taşıyıcı firmaya teslim edilir.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="image-how">
-                            <span class="img">
-                                <img src="/templates/assets/imgs/page/homepage1/delivery.png" alt="transp">
-                            </span>
-                        </div>
-                        <div class="info-how">
-                            <h5 class="color-brand-2">Teslimat Gerçekleşir</h5>
-                            <p class="font-md color-grey-700">
-                                Sipariş durumu sistem üzerinden güncellenir ve süreç tamamlanır.
-                            </p>
-                        </div>
-                    </li>
-
+                    @foreach(var item in Model)
+                    {
+                        <li>
+                            <div class="image-how"> <span class="img"> <img src="@item.IconUrl" alt="transp"></span></div>
+                            <div class="info-how">
+                                <h5 class="color-brand-2">@item.Title</h5>
+                                <p class="font-md color-grey-700">@item.Description</p>
+                            </div>
+                        </li>
+                    }
                 </ul>
             </div>
         </div>

@@ -43,25 +43,25 @@ namespace DatabaseMastery.TransportMongoDb.Mapping
             CreateMap<GetInTouch, CreateGetInTouchDto>().ReverseMap();
             CreateMap<GetInTouch, GetGetInTouchByIdDto>().ReverseMap();
 
-            //CreateMap<HowItWork, ResultHowItWorkDto>().ReverseMap();
-            //CreateMap<HowItWork, CreateHowItWorkDto>().ReverseMap();
-            //CreateMap<HowItWork, UpdateHowItWorkDto>().ReverseMap();
-            //CreateMap<HowItWork, GetHowItWorkByIdDto>().ReverseMap();
+            CreateMap<HowItWork, ResultHowItWorkDto>().ReverseMap();
+            CreateMap<HowItWork, CreateHowItWorkDto>().ReverseMap();
+            CreateMap<HowItWork, UpdateHowItWorkDto>().ReverseMap();
+            CreateMap<HowItWork, GetHowItWorkByIdDto>().ReverseMap();
 
-            //CreateMap<Testimonial, ResultTestimonialDto>().ReverseMap();
-            //CreateMap<Testimonial, CreateTestimonialDto>().ReverseMap();
-            //CreateMap<Testimonial, UpdateTestimonialDto>().ReverseMap();
-            //CreateMap<Testimonial, GetTestimonialByIdDto>().ReverseMap();
+            CreateMap<Testimonial, ResultTestimonialDto>().ReverseMap();
+            CreateMap<Testimonial, CreateTestimonialDto>().ReverseMap();
+            CreateMap<Testimonial, UpdateTestimonialDto>().ReverseMap();
+            CreateMap<Testimonial, GetTestimonialByIdDto>().ReverseMap();
 
-            //CreateMap<ProjectSection, ResultProjectSectionDto>().ReverseMap();
-            //CreateMap<ProjectSection, UpdateProjectSectionDto>().ReverseMap();
-            //CreateMap<ProjectSection, CreateProjectSectionDto>().ReverseMap();
-            //CreateMap<ProjectSection, GetProjectSectionByIdDto>().ReverseMap();
+            CreateMap<ProjectSection, ResultProjectSectionDto>().ReverseMap();
+            CreateMap<ProjectSection, UpdateProjectSectionDto>().ReverseMap();
+            CreateMap<ProjectSection, CreateProjectSectionDto>().ReverseMap();
+            CreateMap<ProjectSection, GetProjectSectionByIdDto>().ReverseMap();
 
-            //CreateMap<Question, ResultQuestionDto>().ReverseMap();
-            //CreateMap<Question, UpdateQuestionDto>().ReverseMap();
-            //CreateMap<Question, GetQuestionByIdDto>().ReverseMap();
-            //CreateMap<Question, CreateQuestionDto>().ReverseMap();
+            CreateMap<Question, ResultQuestionDto>().ReverseMap();
+            CreateMap<Question, UpdateQuestionDto>().ReverseMap();
+            CreateMap<Question, GetQuestionByIdDto>().ReverseMap();
+            CreateMap<Question, CreateQuestionDto>().ReverseMap();
 
             //CreateMap<Shipment, ResultShipmentDto>().ReverseMap();
             //CreateMap<Shipment, CreateShipmentDto>().ReverseMap();
