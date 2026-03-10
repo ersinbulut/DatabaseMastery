@@ -1,3 +1,73 @@
+📊 DatabaseMastery – ASP.NET Core Veritabanı Yönetimi Projesi
+
+Bu proje, Murat Yücedağ tarafından hazırlanan “ASP.NET Core ile MongoDB, PostgreSQL ve MSSQL kullanarak 3 farklı gerçek dünya projesi geliştirme” eğitim serisinin ilk projesi olarak geliştirilmiştir.
+
+DatabaseMastery projesinin temel amacı, ASP.NET Core kullanarak veritabanı işlemlerinin etkin bir şekilde yönetilmesini öğrenmek ve gerçek dünya senaryolarına uygun bir backend mimarisi oluşturmaktır.
+
+Bu proje kapsamında MSSQL veritabanı ile veri yönetimi, Entity Framework Core ile ORM kullanımı ve katmanlı mimari yaklaşımı uygulanmıştır.
+
+🚀 Kullanılan Teknolojiler
+
+Projede aşağıdaki teknolojiler ve geliştirme yaklaşımları kullanılmıştır:
+
+ASP.NET Core
+
+MSSQL Server
+
+Entity Framework Core
+
+LINQ
+
+Katmanlı Mimari (Layered Architecture)
+
+Repository Design Pattern
+
+CRUD (Create, Read, Update, Delete) işlemleri
+
+🎯 Projenin Amacı
+
+Bu proje ile aşağıdaki konularda pratik deneyim kazanılması hedeflenmiştir:
+
+ASP.NET Core ile veritabanı tabanlı uygulama geliştirme
+
+Entity Framework Core kullanarak veri yönetimi
+
+CRUD işlemlerinin uygulanması
+
+Projelerde temiz kod ve sürdürülebilir mimari oluşturma
+
+Gerçek dünya senaryolarına uygun backend geliştirme süreçleri
+
+🏗 Proje Mimarisi
+
+Proje, sürdürülebilir ve ölçeklenebilir bir yapı oluşturmak amacıyla Katmanlı Mimari (Layered Architecture) kullanılarak geliştirilmiştir.
+
+DatabaseMastery
+│
+├── EntityLayer
+│   → Veritabanı varlık modelleri
+│
+├── DataAccessLayer
+│   → Veritabanı işlemleri ve repository yapısı
+│
+├── BusinessLayer
+│   → İş kuralları ve servis katmanı
+│
+└── PresentationLayer
+    → ASP.NET Core MVC kullanıcı arayüzü
+
+Bu mimari yapı sayesinde proje;
+
+modüler
+
+bakımı kolay
+
+geliştirilebilir
+
+bir hale getirilmiştir.
+
+📸 Proje Görselleri
+
 Arayüz e ait görseller
 --------------------------
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/faecde80-30a7-4e8a-b38a-91723e64d830" />
@@ -25,6 +95,28 @@ Admin paneline ait görseller
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ccb34049-4613-4ace-864f-3e8cbcd6aed6" />
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/07c9d64d-96d9-4972-a2bd-cf9fd224879d" />
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/f4673d20-436e-4ca7-a5a5-756d92516dd7" />
+
+📚 Eğitim Serisi
+
+Bu proje, 3 farklı veritabanı teknolojisini kapsayan eğitim serisinin ilk aşamasıdır:
+
+1️⃣ASP.NET Core + MongoDB Projesi ✔️
+2️⃣ ASP.NET Core + PostgreSQL Projesi (Yakında)
+3️⃣ ASP.NET Core + MSSQL Projesi (Yakında)
+
+Bu seri ile farklı veritabanı sistemleri üzerinde uygulama geliştirme yetkinliğimi geliştirmeyi hedefliyorum.
+
+👨‍💻 Geliştirici
+
+Ersin Bulut
+
+🎓 İstanbul Arel Üniversitesi – Bilgisayar Programcılığı
+💻 Software Developer
+
+⭐ Projeyi faydalı bulduysanız repo’ya yıldız vermeyi unutmayın.
+
+
+
 
 
 
