@@ -1,17 +1,18 @@
+using AutoMapper;
+using DatabaseMastery.TransportMongoDb.Services.AboutServices;
+using DatabaseMastery.TransportMongoDb.Services.BrandServices;
+using DatabaseMastery.TransportMongoDb.Services.GetInTouchServices;
+using DatabaseMastery.TransportMongoDb.Services.HowItWorkServices;
+using DatabaseMastery.TransportMongoDb.Services.OfferServices;
+using DatabaseMastery.TransportMongoDb.Services.ProjectSectionServices;
+using DatabaseMastery.TransportMongoDb.Services.QuestionServices;
+using DatabaseMastery.TransportMongoDb.Services.ShipmentServices;
+using DatabaseMastery.TransportMongoDb.Services.ShipmentTrackingServices;
 using DatabaseMastery.TransportMongoDb.Services.SliderServices;
+using DatabaseMastery.TransportMongoDb.Services.TestimonialServices;
 using DatabaseMastery.TransportMongoDb.Settings;
 using Microsoft.Extensions.Options;
 using System.Reflection;
-using AutoMapper;
-using DatabaseMastery.TransportMongoDb.Services.BrandServices;
-using DatabaseMastery.TransportMongoDb.Services.OfferServices;
-using DatabaseMastery.TransportMongoDb.Services.AboutServices;
-using DatabaseMastery.TransportMongoDb.Services.GetInTouchServices;
-using DatabaseMastery.TransportMongoDb.Services.HowItWorkServices;
-
-using DatabaseMastery.TransportMongoDb.Services.TestimonialServices;
-using DatabaseMastery.TransportMongoDb.Services.ProjectSectionServices;
-using DatabaseMastery.TransportMongoDb.Services.QuestionServices;
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -24,6 +25,9 @@ builder.Services.AddScoped<IHowItWorkService, HowItWorkService>();
 builder.Services.AddScoped<ITestimonialService, TestimonialService>();
 builder.Services.AddScoped<IProjectSectionService, ProjectSectionService>();
 builder.Services.AddScoped<IQuestionService, QuestionService>();
+builder.Services.AddScoped<IShipmentService, ShipmentService>();
+builder.Services.AddScoped<IShipmentService, ShipmentService>();
+builder.Services.AddScoped<IShipmentTrackingService, ShipmentTrackingService>();
 
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());

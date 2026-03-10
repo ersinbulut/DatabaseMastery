@@ -63,14 +63,14 @@ namespace DatabaseMastery.TransportMongoDb.Mapping
             CreateMap<Question, GetQuestionByIdDto>().ReverseMap();
             CreateMap<Question, CreateQuestionDto>().ReverseMap();
 
-            //CreateMap<Shipment, ResultShipmentDto>().ReverseMap();
-            //CreateMap<Shipment, CreateShipmentDto>().ReverseMap();
-            //CreateMap<Shipment, UpdateShipmentDto>().ReverseMap();
-            //CreateMap<Shipment, GetShipmentByIdDto>().ReverseMap();
+            CreateMap<Shipment, ResultShipmentDto>().ReverseMap();
+            CreateMap<Shipment, CreateShipmentDto>().ReverseMap();
+            CreateMap<Shipment, UpdateShipmentDto>().ReverseMap();
+            CreateMap<Shipment, GetShipmentByIdDto>().ReverseMap();
 
-            //CreateMap<ShipmentTracking, CreateShipmentTrackingDto>().ReverseMap();
-            //CreateMap<ShipmentTracking, ResultShipmentTrackingDto>().ReverseMap();
-            //CreateMap<ShipmentTracking, UpdateShipmentTrackingDto>().ReverseMap();
+            CreateMap<ShipmentTracking, CreateShipmentTrackingDto>().ReverseMap();
+            CreateMap<ShipmentTracking, ResultShipmentTrackingDto>().ReverseMap();
+            CreateMap<ShipmentTracking, UpdateShipmentTrackingDto>().ReverseMap();
         }
     }
 }

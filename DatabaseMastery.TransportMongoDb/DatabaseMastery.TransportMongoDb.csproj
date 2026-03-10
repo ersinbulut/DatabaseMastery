@@ -7,17 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Services\ShipmentServices\**" />
-    <Compile Remove="Services\ShipmentTrackingServices\**" />
-    <Content Remove="Services\ShipmentServices\**" />
-    <Content Remove="Services\ShipmentTrackingServices\**" />
-    <EmbeddedResource Remove="Services\ShipmentServices\**" />
-    <EmbeddedResource Remove="Services\ShipmentTrackingServices\**" />
-    <None Remove="Services\ShipmentServices\**" />
-    <None Remove="Services\ShipmentTrackingServices\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="10.0.2" />
     <PackageReference Include="MongoDB.Bson" Version="3.6.0" />
