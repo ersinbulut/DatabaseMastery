@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DatabaseMastery.HotCoffeePostgreSQL.Dtos.CategoryDtos;
+using DatabaseMastery.HotCoffeePostgreSQL.Dtos.ProductDtos;
 using DatabaseMastery.HotCoffeePostgreSQL.Entities;
 
 namespace DatabaseMastery.DinnerMenuPostgreSQL.Mapping
@@ -13,7 +14,12 @@ namespace DatabaseMastery.DinnerMenuPostgreSQL.Mapping
             CreateMap<Category, UpdateCategoryDto>().ReverseMap();
             CreateMap<Category, GetCategoryByIdDto>().ReverseMap();
 
-          
+            CreateMap<Product, ResultProductDto>().ReverseMap();
+            CreateMap<Product, CreateProductDto>().ReverseMap();
+            CreateMap<Product, UpdateProductDto>().ReverseMap();
+            CreateMap<Product, GetProductByIdDto>().ReverseMap();
+
+
         }
     }
 }
