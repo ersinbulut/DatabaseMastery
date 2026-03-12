@@ -4,6 +4,10 @@ using DatabaseMastery.HotCoffeePostgreSQL.Services.CategoryServices;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
+using DatabaseMastery.HotCoffeePostgreSQL.Services.ReservationServices;
+using DatabaseMastery.HotCoffeePostgreSQL.Services.DashboardServices;
+using DatabaseMastery.HotCoffeePostgreSQL.Services.ReviewServices;
+using DatabaseMastery.HotCoffeePostgreSQL.Services.ChartServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +17,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IReservationService, ReservationService>();
+builder.Services.AddScoped<IDashboardService, DashboardService>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
+builder.Services.AddScoped<IChartService, ChartService>();
+
 
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
