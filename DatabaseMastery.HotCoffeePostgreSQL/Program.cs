@@ -1,13 +1,15 @@
-using DatabaseMastery.HotCoffeePostgreSQL.Services.ProductServices;
+using AutoMapper;
 using DatabaseMastery.HotCoffeePostgreSQL.Context;
+using DatabaseMastery.HotCoffeePostgreSQL.Mapping;
 using DatabaseMastery.HotCoffeePostgreSQL.Services.CategoryServices;
+using DatabaseMastery.HotCoffeePostgreSQL.Services.ChartServices;
+using DatabaseMastery.HotCoffeePostgreSQL.Services.DashboardServices;
+using DatabaseMastery.HotCoffeePostgreSQL.Services.ProductServices;
+using DatabaseMastery.HotCoffeePostgreSQL.Services.ReservationServices;
+using DatabaseMastery.HotCoffeePostgreSQL.Services.ReviewServices;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using DatabaseMastery.HotCoffeePostgreSQL.Services.ReservationServices;
-using DatabaseMastery.HotCoffeePostgreSQL.Services.DashboardServices;
-using DatabaseMastery.HotCoffeePostgreSQL.Services.ReviewServices;
-using DatabaseMastery.HotCoffeePostgreSQL.Services.ChartServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,8 +25,15 @@ builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<IChartService, ChartService>();
 
 
+builder.Services.AddAutoMapper(cfg => { },
+    typeof(GeneralMapping).Assembly);
 
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+// Or
+builder.Services.AddAutoMapper(cfg => { },
+    Assembly.GetExecutingAssembly());
+
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

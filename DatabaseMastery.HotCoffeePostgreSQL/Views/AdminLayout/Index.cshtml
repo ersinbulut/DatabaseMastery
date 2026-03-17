@@ -627,25 +627,30 @@
         </a>
 
         <!-- Navigation -->
+        @{
+            var controller = ViewContext.RouteData.Values["controller"]?.ToString();
+            var action = ViewContext.RouteData.Values["action"]?.ToString();
+        }
+
         <nav class="sidebar-nav">
 
             <!-- Ana Menü -->
             <div class="nav-section-label">Ana Menü</div>
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/Dashboard/Index/">
+                    <a class="nav-link @(controller == "Dashboard" ? "active" : "")" href="/Dashboard/Index/">
                         <i class="bi bi-grid-1x2-fill nav-icon"></i>
                         <span class="nav-label">Dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Category/CategoryCardList/">
+                    <a class="nav-link @(controller == "Category" ? "active" : "")" href="/Category/CategoryCardList/">
                         <i class="bi bi-tags-fill nav-icon"></i>
                         <span class="nav-label">Kategoriler</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Product/ProductList/">
+                    <a class="nav-link @(controller == "Product" ? "active" : "")" href="/Product/ProductList/">
                         <i class="bi bi-basket3-fill nav-icon"></i>
                         <span class="nav-label">Ürünler</span>
                     </a>
@@ -656,27 +661,27 @@
             <div class="nav-section-label">Operasyonlar</div>
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link" href="/Reservation/ReservationList/">
+                    <a class="nav-link @(controller == "Reservation" ? "active" : "")" href="/Reservation/ReservationList/">
                         <i class="bi bi-calendar2-check-fill nav-icon"></i>
                         <span class="nav-label">Rezervasyonlar</span>
                         <span class="nav-badge">3</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link @(controller == "Order" ? "active" : "")" href="#">
                         <i class="bi bi-bag-check-fill nav-icon"></i>
                         <span class="nav-label">Siparişler</span>
                         <span class="nav-badge">12</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link @(controller == "Customer" ? "active" : "")" href="#">
                         <i class="bi bi-people-fill nav-icon"></i>
                         <span class="nav-label">Müşteriler</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link @(controller == "Review" ? "active" : "")" href="/Review/ReviewList/">
                         <i class="bi bi-chat-square-dots-fill nav-icon"></i>
                         <span class="nav-label">Yorumlar</span>
                         <span class="nav-badge">5</span>
@@ -688,19 +693,19 @@
             <div class="nav-section-label">Analiz & Ayarlar</div>
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link @(controller == "Statistics" ? "active" : "")" href="/Statistics/Index/">
                         <i class="bi bi-bar-chart-line-fill nav-icon"></i>
                         <span class="nav-label">İstatistikler</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link @(controller == "Campaign" ? "active" : "")" href="#">
                         <i class="bi bi-megaphone-fill nav-icon"></i>
                         <span class="nav-label">Kampanyalar</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link @(controller == "Settings" ? "active" : "")" href="#">
                         <i class="bi bi-gear-fill nav-icon"></i>
                         <span class="nav-label">Ayarlar</span>
                     </a>
