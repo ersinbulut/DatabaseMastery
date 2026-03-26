@@ -1,41 +1,92 @@
-📊 DatabaseMastery – ASP.NET Core & MongoDB Projesi
-
-Bu proje, Murat Yücedağ tarafından hazırlanan “ASP.NET Core ile MongoDB, PostgreSQL ve MSSQL kullanarak 3 farklı gerçek dünya projesi geliştirme” eğitim serisinin ilk projesi olarak geliştirilmiştir.
-
-DatabaseMastery projesinin amacı, ASP.NET Core ile MongoDB veritabanını kullanarak veri yönetimi ve CRUD işlemlerini uygulamalı olarak öğrenmek ve NoSQL veritabanları ile backend geliştirme konusunda pratik deneyim kazanmaktır.
-
-Bu proje kapsamında MongoDB veritabanı kullanılarak veri ekleme, listeleme, güncelleme ve silme işlemleri gerçekleştirilmiştir.
-
+--------------------------------------------------
+2.PROJE
+--------------------------------------------------
+📊 DatabaseMastery – ASP.NET Core & PostgreSQL Projesi
+Bu proje, Murat Yücedağ tarafından hazırlanan eğitim serisinden ilham alınarak geliştirilmiş olup, ASP.NET Core ile PostgreSQL kullanımını pratik olarak öğrenmeyi amaçlayan bir uygulamadır.
+DatabaseMastery projesi, ilişkisel veritabanı mantığını kavramak ve backend tarafında veri yönetimini uygulamalı olarak deneyimlemek için oluşturulmuştur.
+🧠 Proje Hakkında
+Bu uygulama, PostgreSQL kullanarak temel veri işlemlerinin (CRUD) nasıl gerçekleştirileceğini gösteren sade ve anlaşılır bir örnektir.
+Proje boyunca:
+Veri ekleme
+Veri listeleme
+Veri güncelleme
+Veri silme
+işlemleri başarıyla uygulanmıştır.
 🚀 Kullanılan Teknolojiler
-
 Projede aşağıdaki teknolojiler kullanılmıştır:
-
-ASP.NET Core
-
-MongoDB
-
-MongoDB.Driver
-
-NoSQL Veri Yönetimi
-
-CRUD (Create, Read, Update, Delete) İşlemleri
-
+⚙️ ASP.NET Core MVC
+🐘 PostgreSQL
+🔗 Entity Framework Core
+🔄 LINQ
+📦 İlişkisel Veri Tabanı Yönetimi
+🔄 CRUD İşlemleri
 🎯 Projenin Amacı
-
-Bu proje ile aşağıdaki konularda pratik deneyim kazanılması hedeflenmiştir:
-
-ASP.NET Core ile MongoDB entegrasyonu
-
-NoSQL veritabanı kullanımı
-
-CRUD işlemlerinin uygulanması
-
+Bu proje ile aşağıdaki konularda pratik kazanım hedeflenmiştir:
+ASP.NET Core ile PostgreSQL entegrasyonu
+İlişkisel veritabanı (SQL) mantığını anlama
+CRUD operasyonlarının uygulanması
 Backend geliştirme süreçlerinde veri yönetimi
-
 📂 Proje Yapısı
+Proje, tek katmanlı (single layer) mimari kullanılarak geliştirilmiştir:
+📦 DatabaseMastery
+│
+├── Controllers
+│   → Uygulama akışını yöneten controller yapıları
+│
+├── Models
+│   → Veritabanı tablolarına karşılık gelen veri modelleri
+│
+├── Views
+│   → Kullanıcı arayüzü (UI) katmanı
+│
+└── Data
+    → DbContext ve veritabanı bağlantı işlemleri
+⚡ Özellikler
+✅ PostgreSQL ile veri yönetimi
+✅ CRUD işlemleri (Ekle / Listele / Güncelle / Sil)
+✅ Entity Framework Core ile ORM kullanımı
+✅ Basit ve anlaşılır mimari
+✅ İlişkisel veri yapısına uygun modelleme
 
+📸 Proje Görselleri
+Admin Tarafı Görselleri
+---------------------------
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/15962e0b-4b41-42dc-8455-d01db94628d3" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/1792e541-7a9e-448d-a6f6-7d4babb0a0a2" />
+<img width="1919" height="1076" alt="image" src="https://github.com/user-attachments/assets/7d560ebb-8391-4ca4-af60-a15762cdcd85" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/d07a2a34-ed4a-4367-9cc0-0ce490b51d18" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/9e3df050-0b3d-40f8-8c6b-f25d292f8441" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/4aea8e00-02ad-4b53-b5c6-425019689a6c" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/f69887bd-0515-478f-9476-81bb51260fbc" />
+<img width="1919" height="1073" alt="image" src="https://github.com/user-attachments/assets/848f520c-986a-40ed-8f42-4cedd1faf6ed" />
+
+Arayüz Görselleri
+------------------------
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/b1d0a12f-fea6-4572-bee5-317559fa66b9" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/6c8ac774-56fe-4ef8-a5f0-a3113804f95e" />
+
+--------------------------------------------------
+1.PROJE
+--------------------------------------------------
+📊 DatabaseMastery – ASP.NET Core & MongoDB Projesi
+Bu proje, Murat Yücedağ tarafından hazırlanan “ASP.NET Core ile MongoDB, PostgreSQL ve MSSQL kullanarak 3 farklı gerçek dünya projesi geliştirme” eğitim serisinin ilk projesi olarak geliştirilmiştir.
+DatabaseMastery projesinin amacı, ASP.NET Core ile MongoDB veritabanını kullanarak veri yönetimi ve CRUD işlemlerini uygulamalı olarak öğrenmek ve NoSQL veritabanları ile backend geliştirme konusunda pratik deneyim kazanmaktır.
+Bu proje kapsamında MongoDB veritabanı kullanılarak veri ekleme, listeleme, güncelleme ve silme işlemleri gerçekleştirilmiştir.
+🚀 Kullanılan Teknolojiler
+Projede aşağıdaki teknolojiler kullanılmıştır:
+ASP.NET Core
+MongoDB
+MongoDB.Driver
+NoSQL Veri Yönetimi
+CRUD (Create, Read, Update, Delete) İşlemleri
+🎯 Projenin Amacı
+Bu proje ile aşağıdaki konularda pratik deneyim kazanılması hedeflenmiştir:
+ASP.NET Core ile MongoDB entegrasyonu
+NoSQL veritabanı kullanımı
+CRUD işlemlerinin uygulanması
+Backend geliştirme süreçlerinde veri yönetimi
+📂 Proje Yapısı
 Proje tek katmanlı bir yapı kullanılarak geliştirilmiştir.
-
 DatabaseMastery
 │
 ├── Controllers
