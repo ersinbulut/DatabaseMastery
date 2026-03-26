@@ -18,6 +18,7 @@
     @await Component.InvokeAsync("_StatisticsReservationStatusComponentPartial")
     @await Component.InvokeAsync("_StatisticsCategoryTableComponentPartial")
     @await Component.InvokeAsync("_StatisticsRatingDistComponentPartial")
+  
 
 
     <!-- Kategori Tablosu -->
@@ -29,75 +30,12 @@
 
 <!-- ROW 2 -->
 <div class="row g-3 mb-3">
-
     <!-- En İyi Ürünler -->
-    <div class="col-xl-4">
-        <div class="sec-card" style="animation-delay:.18s;">
-            <div class="card-head">
-                <div class="ch-icon" style="background:var(--yellow-soft);"><i class="bi bi-trophy-fill" style="color:var(--yellow);"></i></div>
-                <div><div class="sec-title">En İyi Ürünler</div><div class="sec-sub">Puana göre sıralı top 5</div></div>
-            </div>
-            <div class="card-body">
-                <div class="rank-list">
-                    @{
-                        var prods = new[] { new { n = 1, em = "🍖", name = "Kuzu İncik", cat = "Ana Yemekler", rev = "42", rat = "4.9" }, new { n = 2, em = "🍮", name = "Kazandibi", cat = "Tatlılar", rev = "38", rat = "4.8" }, new { n = 3, em = "🥗", name = "Semizotu Salatası", cat = "Başlangıçlar", rev = "29", rat = "4.7" }, new { n = 4, em = "🥩", name = "Dana Antrikot", cat = "Ana Yemekler", rev = "55", rat = "4.6" }, new { n = 5, em = "🍹", name = "Limonata", cat = "İçecekler", rev = "61", rat = "4.5" }, };
-                        var rnc = new[] { "rn-1", "rn-2", "rn-3", "rn-o", "rn-o" };
-                    }
-                    @foreach (var p in prods)
-                    {
-                        <div class="rank-item">
-                            <div class="rank-num @rnc[p.n - 1]">@p.n</div>
-                            <div class="rank-em">@p.em</div>
-                            <div><div class="rank-name">@p.name</div><div class="rank-meta">@p.cat · @p.rev yorum</div></div>
-                            <div class="rank-right"><div class="rank-val">@p.rat</div><div class="rank-badge">★★★★★</div></div>
-                        </div>
-                    }
-                </div>
-            </div>
-        </div>
-    </div>
+    @await Component.InvokeAsync("_StatisticsTopProductsComponentPartial")
+  
 
     <!-- Isı Haritası -->
-    <div class="col-xl-5">
-        <div class="sec-card" style="animation-delay:.20s;">
-            <div class="card-head">
-                <div class="ch-icon" style="background:var(--purple-soft);"><i class="bi bi-clock-fill" style="color:var(--purple);"></i></div>
-                <div><div class="sec-title">Rezervasyon Yoğunluğu</div><div class="sec-sub">Gün & saat bazlı ısı haritası</div></div>
-            </div>
-            <div class="card-body">
-                <div class="heatmap-grid">
-                    <div></div>
-                    @foreach (var d in new[] { "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz" })
-                    {
-                        <div class="hm-day-lbl">@d</div>
-                    }
-                    @{
-                        var hrs = new[] { "12:00", "14:00", "16:00", "18:00", "20:00", "22:00" };
-                        var hd = new int[,] { { 2, 3, 2, 4, 5, 8, 7 }, { 3, 4, 3, 5, 6, 9, 8 }, { 2, 2, 3, 3, 5, 7, 6 }, { 5, 6, 7, 8, 12, 15, 13 }, { 8, 9, 10, 11, 14, 18, 16 }, { 6, 7, 8, 9, 12, 14, 12 } };
-                        var hmc = new[] { "#fdf5e6", "#fbe8c0", "#f8d48a", "#f5c054", "#e6a03c", "#c8861e", "#a06815" };
-                        var dys = new[] { "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz" };
-                    }
-                    @for (int hr = 0; hr < hrs.Length; hr++)
-                    {
-                        <div class="hm-hr-lbl">@hrs[hr]</div>
-                        @for (int dy = 0; dy < 7; dy++)
-                        {
-                            var v = hd[hr, dy]; var ci = Math.Min((int)Math.Round(v / 3.0), hmc.Length - 1);
-                            <div class="hm-cell" style="background:@hmc[ci];" data-tip="@dys[dy] @hrs[hr] — @v rezervasyon"></div>
-                        }
-                    }
-                </div>
-                <div class="d-flex align-items-center gap-2 mt-3" style="font-size:11.5px;color:var(--muted);">
-                    <span>Az</span>
-                    @foreach (var c in new[] { "#fdf5e6", "#fbe8c0", "#f8d48a", "#f5c054", "#e6a03c", "#c8861e", "#a06815" })
-                    {
-                        <div style="width:18px;height:10px;border-radius:3px;background:@c;"></div>
-                    }
-                    <span>Çok</span>
-                </div>
-            </div>
-        </div>
-    </div>
+    @await Component.InvokeAsync("_StatisticsHeatmapComponentPartial")
 
     <!-- Müşteri Metrikleri -->
     <div class="col-xl-3">
